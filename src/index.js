@@ -1,4 +1,3 @@
-// edrfherherherh
 const SCROLL_TIMEOUT_DEFAULT = 300
 const SCROLL_TIME_DEFAULT = 2
 const NOOP = () => {}
@@ -12,6 +11,7 @@ export default function (element, config) {
 
   if (!config.scrollSnapDestination) throw new Error('Required config property scrollSnapDestination is not defined')
   const SCROLL_SNAP_DESTINATION = config.scrollSnapDestination
+  const SNAP_TO_NEAREST = config.snapToNearest
 
   let onAnimationEnd
   let timeOutId = null
@@ -188,6 +188,9 @@ export default function (element, config) {
   * @return {Number}
   */
   function roundByDirection (direction, currentPoint) {
+    if(SNAP_TO_NEAREST) {
+      return Math.round(currentPoint)
+    }
     if (direction === -1) {
       // when we go up, we floor the number to jump to the next snap-point in scroll direction
       return Math.floor(currentPoint)
