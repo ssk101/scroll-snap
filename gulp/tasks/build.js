@@ -5,6 +5,7 @@ var rename = require('gulp-rename')
 var watch = require('gulp-watch')
 
 gulp.task('scripts', () => {
+  gulp.start('build')
   return watch('./src', () => {
     gulp.start('build')
   })
