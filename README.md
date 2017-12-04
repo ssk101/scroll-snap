@@ -8,6 +8,18 @@ This fork adds a config option to allow snapping to the item currently occupying
   }
 ```
 
+Build pipeline has been replaced with Gulp.
+
+Build:
+```
+gulp
+```
+
+Build + watch:
+```
+gulp scripts
+```
+
 ## Original readme:
 
 scroll-snap
