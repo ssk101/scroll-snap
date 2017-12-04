@@ -1,3 +1,15 @@
+# This is a fork of [scroll-snap](https://github.com/lucafalasco/scroll-snap)
+
+This fork adds a config option to allow snapping to the item currently occupying most of its parent container, as opposed to snapping to the next item in the current scroll direction:
+
+```javascript
+  const snapConfig = {
+      snapToNearest: true // *OPTIONAL* (default = false)
+  }
+```
+
+## Original readme:
+
 scroll-snap
 ===========
 
@@ -22,8 +34,6 @@ or
 ```sh
 yarn add scroll-snap
 ```
-
-You can also grab a pre-built version from [unpkg](https://unpkg.com/scroll-snap/dist/scroll-snap.js)
 
 ## Usage
 
@@ -57,19 +67,12 @@ snapObject.bind(callback)
 // snapObject.unbind();
 ```
 
-[Here](https://lucafalasco.github.io/scroll-snap/) you can see a working demo.
-
 ## Contributing
 
 ```
 git clone https://github.com/lucafalasco/scroll-snap.git
 cd scroll-snap
 npm install
-```
-
-Start the test app from `demo/` and fire up the dev server
-```
-npm start
 ```
 
 Build for production:
